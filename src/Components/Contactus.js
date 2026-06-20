@@ -111,7 +111,7 @@ const Contactus = () => {
     try {
 
       const response = await fetch(
-        'http://localhost:5000/api/enquiries',
+         `${process.env.REACT_APP_API_URL}/api/enquiries`,
         {
           method: 'POST',
           headers: {
