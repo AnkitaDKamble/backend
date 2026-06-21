@@ -35,49 +35,8 @@ const Contactus = () => {
   };
 
   useEffect(() => {
-
-    const fetchUserProfile = async () => {
-
-      const token = localStorage.getItem('token');
-
-      if (token) {
-
-        try {
-
-          const response = await fetch(
-            `${process.env.REACT_APP_API_URL}/api/profile`,
-            {
-              method: 'GET',
-              headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json',
-              },
-            }
-          );
-
-          if (response.ok) {
-
-            const userData = await response.json();
-
-            setFormData(prevData => ({
-              ...prevData,
-              name: userData.username || '',
-              email: userData.email || '',
-              mobile: userData.mobile || '',
-            }));
-          }
-
-        } catch (error) {
-          console.error(error);
-        }
-      }
-
-      setIsLoading(false);
-    };
-
-    fetchUserProfile();
-
-  }, []);
+  setIsLoading(false);
+}, []);
 
   const handleChange = (e) => {
 
