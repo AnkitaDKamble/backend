@@ -1,5 +1,7 @@
 {
   "name": "infinity-web-backend",
+  "message": "Infinity Web Backend Running",
+
   "version": "1.0.0",
   "description": "Backend API for Infinity Web Solutions",
   "main": "server.js",
